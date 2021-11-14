@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.jdw</groupId>
+	<artifactId>springCloud</artifactId>
+	<version>${revision}</version>
+	<packaging>pom</packaging>
+	<name>springCloud</name>
+	<description>demo project for springCloud</description>
+
+	<!--父模块-->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.3.7.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<!--项目设置-->
+	<properties>
+		<revision>1.0.0-RELEASE</revision>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Brixton.SR5</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<!--子模块-->
+	<modules>
+		<module>api-gateway</module>
+		<module>config-server</module>
+		<module>eureka-server</module>
+		<module>feign-consumer</module>
+		<module>hystrix-dashboard</module>
+		<module>ribbon-consumer</module>
+		<module>service-provider</module>
+	</modules>
+</project>
