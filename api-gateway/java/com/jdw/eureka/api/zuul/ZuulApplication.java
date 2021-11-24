@@ -1,6 +1,6 @@
 package com.jdw.eureka.api.zuul;
 
-import com.jdw.eureka.api.zuul.filter.error.MyFilterProcessor;
+import com.jdw.eureka.api.zuul.filter.post.special.MyFilterProcessor;
 import com.netflix.zuul.FilterProcessor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
