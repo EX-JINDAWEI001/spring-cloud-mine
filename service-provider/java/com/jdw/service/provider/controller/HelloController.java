@@ -8,6 +8,8 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Random;
+
 @RestController
 public class HelloController {
 
@@ -18,13 +20,13 @@ public class HelloController {
 
     @RequestMapping("/hello.do")
     public String hello() {
-        /*int sleepTime = new Random().nextInt(3000);
+        int sleepTime = new Random().nextInt(3000);
         logger.info("hello sleepTime is {}", sleepTime);
         try {
             Thread.sleep(sleepTime);
         } catch (InterruptedException e) {
             logger.error("thread is interrupted!!!", e);
-        }*/
+        }
         ServiceInstance instance = client.getLocalServiceInstance();
         logger.info("/hello.do, host:{}, service_id:{}, port:{}", instance.getHost(), instance.getServiceId(), instance.getPort());
         return "Hello World";
