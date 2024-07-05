@@ -14,7 +14,7 @@
     <!--父模块-->
     <parent>
         <groupId>com.jdw</groupId>
-        <artifactId>springCloud</artifactId>
+        <artifactId>spring-cloud-mine</artifactId>
         <version>${revision}</version>
     </parent>
 
